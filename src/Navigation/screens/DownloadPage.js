@@ -19,7 +19,7 @@ export default class DownloadPage extends React.Component {
           style={{borderRadius:20,
                   width: Dimensions.get('window').width *0.9,
                   height: Dimensions.get('window').height *0.5}}
-          source={require('C:/Users/ceyni/Desktop/ProfilePicture/src/assets/girl.jpg')}
+          source={require('../../assets/girl.jpg')}
       /></View>
       
       <View style={{alignItems:'center',marginTop:20}}>
