@@ -1,25 +1,27 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput } from 'react-native'
+import { View, TextInput } from 'react-native'
 import { Styles } from '../Styles/Style'
+import axios from 'axios';
 
 export default class SearchBar extends Component {
 
     state = {
-        search: '',
+        username: '',
       };
     
-      updateSearch = search => {
-        this.setState({ search });
+      updateSearch = username => {
+        this.setState({ username });
+        
       };
 
-
     render() {
-        const { search } = this.state;
+        const { username } = this.state;
+        
         return (
             <View>
                 <TextInput style={Styles.searchbar} 
                 onChangeText={this.updateSearch}
-                value={search}
+                value={username}
                 placeholder="Search a username">
                 </TextInput>
             </View>
