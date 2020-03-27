@@ -1,11 +1,11 @@
 import React from "react";
-import AppNavigator from "./src/Navigation/Navigator";
+import MainPage from "./src/MainPage";
 
 
 export default class App extends React.Component {
   render() {
     return (
-        <AppNavigator />
+      <MainPage/>
     );
   }
 }
