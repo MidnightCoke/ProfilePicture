@@ -7,16 +7,19 @@ export default class SearchBar extends Component {
 
     state = {
         username: '',
+        data: '',
       };
-    
+      
+
       updateSearch = username => {
         this.setState({ username });
+        console.log(username)
         
       };
 
     render() {
         const { username } = this.state;
-        
+
         return (
             <View>
                 <TextInput style={Styles.searchbar} 

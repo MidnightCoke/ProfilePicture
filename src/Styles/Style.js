@@ -20,16 +20,32 @@ export const Styles = StyleSheet.create({
 
     },
     imageview: {
-
+        justifyContent:'center',
         width: 300,
-        height: 300
+        height: 300,
+        paddingTop: 7,
+        paddingBottom: 7,
+        paddingLeft: 7,
+        paddingRight: 17,
 
     },
     imageborder: {
+
         borderWidth: 1,
         borderRadius: 10,
         borderColor: 'gray',
-
+        paddingTop: 7,
+        paddingBottom: 7,
+        paddingLeft: 7,
+        paddingRight: 7,
+    },
+    imageloading: {
+        justifyContent:'center',
+        width: 300,
+        height: 300,
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: 'gray',
         paddingTop: 7,
         paddingBottom: 7,
         paddingLeft: 7,

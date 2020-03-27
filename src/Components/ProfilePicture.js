@@ -1,16 +1,34 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { ActivityIndicator, View, Image } from 'react-native'
 import { Styles } from '../Styles/Style'
 
 export default class ProfilePicture extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoading: false,
+            dataSource: null,
+        }
+    }
+
     render() {
+        if(this.state.isLoading){
+
+            return(
+                <View style={Styles.imageloading}>
+                    <ActivityIndicator size="large" color="#0000ff" />
+                </View>
+            )
+        } else{
         return (
             <View style={Styles.imageborder}>
                 <Image
                     style={Styles.imageview}
-                    source={{ uri: 'https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/79890523_625103138244752_2070041947384315904_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_ohc=S6Bn4FdTb9gAX9Rw_fP&oh=41f3457d7dee4ccb6afa172d7111e931&oe=5EA60D4B' }}
+                    source={{ uri: 'https://www.gstatic.com/tv/thumb/persons/784313/784313_v9_bb.jpg' }}
                 />
             </View>
         )
+        }
     }
 }
